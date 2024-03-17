@@ -1,0 +1,53 @@
+/* Styling for the navigation bar */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1149ff87; /* Change to desired background color */
+    z-index: 1000; /* Ensure the navigation bar stays on top */
+    text-align: right; /* Align the content to the right */
+    padding-right: 20px; /* Adjust padding for the hamburger menu icon */
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+}
+
+#navbar li {
+    display: inline-block; /* Display list items horizontally */
+}
+
+#navbar li a {
+    display: block;
+    color: white; /* Change to desired text color */
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em; /* Set base font size */
+}
+
+#navbar li a:hover {
+    background-color: #55555500; /* Change to desired hover background color */
+}
+
+/* Styling for the hamburger menu icon */
+#navbar .hamburger-icon {
+    display: none; /* Hide the hamburger menu icon by default */
+    padding: 14px 16px;
+    cursor: pointer;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    /* Hide the navigation links */
+    #navbar ul {
+        display: none;
+    }}
+
+    /* Show the hamburger menu icon */
+    #navbar .hamburger-icon {
+        display: block;
+    }
+

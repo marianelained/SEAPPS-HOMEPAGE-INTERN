@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact Us</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+</head>
+
+<body class="bg-blue-280 flex pl-20">
+    <div id="navbar"></div>
+    <script>
+        // Fetch navbar.html and insert it into the #navbar element
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            })
+            .catch(error => console.error('Error fetching navbar:', error));
+    </script>
+<p >
+    <div>Contact us</div>
+</p>
+</body>
+
+</html>

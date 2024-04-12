@@ -12,7 +12,7 @@
 
 #navbar ul {
     list-style-type: none;
-    margin: 10px;
+    margin: 10px 0; /* Adjust top and bottom margin */
     padding: 0;
 }
 
@@ -44,10 +44,21 @@
     /* Hide the navigation links */
     #navbar ul {
         display: none;
-    }}
-
+    }
+    
     /* Show the hamburger menu icon */
     #navbar .hamburger-icon {
         display: block;
     }
+}
 
+/* Aligning navigation items to the right */
+@media (min-width: 769px) {
+    #navbar {
+        justify-content: flex-end;
+    }
+}
+
+body {
+    padding-top: 100px; /* Adjust the padding to match the height of the navbar */
+}

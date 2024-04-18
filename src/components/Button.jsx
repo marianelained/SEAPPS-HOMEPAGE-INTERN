@@ -1,10 +1,9 @@
 
-
 export function Button( {onClick , buttonName} ) {
 
     return (
 
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={onClick} >
+        <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700" onClick={onClick} >
                 {buttonName}
         </button>
 

@@ -1,20 +1,30 @@
-import { Button } from "../components/Button";
-import { useState } from "react";
+import React, {useEffect} from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Services from "../components/Services";
+import Services1 from "../components/Services1";
 
-export function Homepage() {
-    
-    const [counter, setCounter] = useState(0)
 
- 
+const Homepage = () => {
+  useEffect(() => {
+    AOS.init({
+        offset: 100,
+        duration: 700,
+        easing: "ease-in",
+        delay: 100,
+      }
+    );
+  }) 
+  return <div className="overflow-x-hidden">
+    <Navbar/>
+    <Header/>
+    <Services/>
+    <Services1/>
+   
+  </div>;
+  
+};
 
-    return(
-
-        <>
-
-            <p>{counter}</p>
-
-            <Button onClick ={() => setCounter( counter + 1 )} buttonName={"Sample button"}/>
-
-        </>
-    )
-}
+export default Homepage;

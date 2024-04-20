@@ -41,8 +41,17 @@ export default {
           },
         },
         colors: {
-          'custom-blue': '#67e8f9', 
+          'custom-blue': '#67e8f9',
+          'bright-red': '#FF0000',
+          'dark-blue': '#0B091B',
+          'default-blue': '#00558D',
+          'extra-blue': '#0E1B4D',
         },
+        container: {
+          center: true,
+          padding: "1 rem",
+          sm: "2 rem",
+        }
 
     },
   },

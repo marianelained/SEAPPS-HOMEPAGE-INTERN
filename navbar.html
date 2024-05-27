@@ -1,16 +1,56 @@
-<nav id="navbar" class="flex justify-between bg-blue-280 p-2">
-  <ul class="flex flex-wrap list-none">
-    <li><a href="#" onclick="navigateTo('home')" class="p-2 text-white">Home</a></li>
-    <li><a href="#" onclick="navigateTo('products')" class="p-2 text-white">Products & Services</a></li>
-    <li><a href="#" onclick="navigateTo('news')" class="p-2 text-white">News & Updates</a></li>
-    <li><a href="#" onclick="navigateTo('partners')" class="p-2 text-white">Partners</a></li>
-    <li><a href="#" onclick="navigateTo('about')" class="p-2 text-white">About Us</a></li>
-    <li><a href="#" onclick="navigateTo('faqs')" class="p-2 text-white">FAQs</a></li>
-    <li><a href="contactus.html" onclick="navigateTo('contact')" class="p-2 text-white">Contact Us!</a></li>
-    <li><button class="p-2 bg-blue-600 rounded-full mt-2 border-1 pl-2 pr-2 text-white">Book Now</button></li>
-  </ul>
-</nav>
+<!DOCTYPE html>
+<html lang="en">
 
-<!-- #00558D
-#FF0000
-#E0E0E0 -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <!-- Link the CSS file for navigation -->
+    <link rel="stylesheet" href="navbar.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="w-full bg-white shadow">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <div id="logo">
+                <a href="index.html" class="scrollto"><img src="src\assets\sea-nav-logo.png" alt="SEAi Logo" title="SEAi Logo"></a>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul class="flex space-x-6">
+                    <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+                    <!-- Dropdown Menu -->
+                    <li class="dropdown relative">
+                        <a href="#" class="nav-link flex items-center">Products & Services <i class="bi bi-chevron-down ml-1"></i></a>
+                        <ul class="dropdown-menu absolute hidden bg-white text-gray-700 pt-1 mt-1 shadow-lg">
+                            <li><a class="nav-link block px-4 py-2 hover:bg-gray-200" href="FiliPay.html">FILIPAY</a></li>
+                            <li><a class="nav-link block px-4 py-2 hover:bg-gray-200" href="FilipCoin.html">FILIPCOIN</a></li>
+                        </ul>
+                    </li>
+                    <!-- End Dropdown Menu -->
+                    <li><a class="nav-link scrollto" href="NewsAndUpdates.html">News & Updates</a></li>
+                    <li><a class="nav-link scrollto" href="Partners.html">Partners</a></li>
+                    <li><a class="nav-link scrollto" href="AboutUs.html">About Us</a></li>
+                    <!-- Dropdown Menu -->
+                    <li class="dropdown relative">
+                        <a href="#" class="nav-link flex items-center">FAQs <i class="bi bi-chevron-down ml-1"></i></a>
+                        <ul class="dropdown-menu absolute hidden bg-white text-gray-700 pt-1 mt-1 shadow-lg">
+                            <li><a class="nav-link block px-4 py-2 hover:bg-gray-200" href="FAQs.html">FILIPAY</a></li>
+                            <li><a class="nav-link block px-4 py-2 hover:bg-gray-200" href="https://filipcoin.com/faq">FILIPCOIN</a></li>
+                        </ul>
+                    </li>
+                    <!-- End Dropdown Menu -->
+                    <li><a class="nav-link scrollto active" href="contactus.html">Contact Us</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <a class="buy-tickets scrollto" data-popup-open="popupBook">Book Now</a>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Insert any necessary JavaScript files or scripts here -->
+</body>
+
+</html>

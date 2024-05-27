@@ -1,0 +1,88 @@
+/* Styling for the navigation bar */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00558D; /* Adjust background color */
+  z-index: 1000; /* Ensure the navigation bar stays on top */
+  display: flex; /* Make the navbar flex container */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Center items vertically */
+  padding-right: 20px; /* Adjust padding for the hamburger menu icon */
+}
+
+#navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar ul li {
+  display: inline-block; /* Display list items horizontally */
+  position: relative; /* Position relative for submenu */
+}
+
+#navbar ul li a {
+  display: block;
+  color: white; /* Set text color */
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1em; /* Set base font size */
+}
+
+#navbar ul li.dropdown ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #00558D; /* Adjust background color */
+  padding: 10px 0;
+  margin-top: 5px; /* Adjust margin to align submenu with parent */
+}
+
+#navbar ul li.dropdown:hover ul {
+  display: block;
+}
+
+#navbar ul li.dropdown ul li {
+  display: block;
+}
+
+#navbar ul li.dropdown ul li a {
+  color: white; /* Set text color */
+  padding: 10px 20px;
+}
+
+/* Styling for the "Book Now" button */
+.buy-tickets {
+  background-color: blue; /* Set button background color */
+  border: none;
+  color: white; /* Set button text color */
+  padding: 8px 15px; /* Adjust padding to make the button smaller */
+  line-height: 1; /* Set line-height to 1 to match the height of the text */
+  text-align: center;
+  text-decoration: none;
+  border-radius: 900px; /* Reduce border-radius to make the button smaller and less circular */
+  margin-left: 20px; /* Add margin to separate it from other items */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  /* Hide the navigation links */
+  #navbar ul {
+      display: none;
+  }
+
+  /* Show the hamburger menu icon */
+  #navbar .mobile-nav-toggle {
+      display: block;
+      padding: 14px 16px;
+      cursor: pointer;
+  }
+
+  .buy-tickets {
+      margin-left: auto; /* Automatically align the button to the right */
+      margin-right: 20px; /* Add margin to separate it from other items */
+  }
+}

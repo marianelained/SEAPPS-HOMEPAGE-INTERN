@@ -1,26 +1,308 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <link href="navbar.css" rel="stylesheet">
+    <!-- <link href="navbar.css" rel="stylesheet"> -->
+    <!-- Template Main CSS File -->
+    <link href="contactus-style.css" rel="stylesheet">
 </head>
 
-<body class="bg-blue-280 flex pl-20">
-    <div id="navbar"></div>
-    <script>
-        // Fetch navbar.html and insert it into the #navbar element
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar').innerHTML = html;
-            })
-            .catch(error => console.error('Error fetching navbar:', error));
-    </script>
-<p >
-    <div>Contact us</div>
-</p>
+<body class="bg-blue-200 flex flex-col items-center justify-start min-h-screen">
+
+        <!-- Hero Section -->
+        <section id="hero" class="w-full flex justify-center bg-gray-100 py-10">
+          <div class="hero-container" data-aos="fade-up">
+              <img id="seailogo" src="src\assets\contactus-logo.png" alt="Contact Us Logo">
+          </div>
+      </section>
+      <!-- End Hero Section -->
+
+    <!-- Header -->
+
+    <div id="navbarContainer"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+        $('#navbarContainer').load('navbar.html');
+    });
+</script>
+
+    <!-- End Header -->
+
+
+
+   <!-- ======= Contact Section ======= -->
+<main id="main">
+
+    <section id="contact" style="margin-bottom: 10%;">
+   <div class="container" data-aos="fade-up">
+   
+    <div class="row contact-info" style="margin-left: 1%;">
+  
+      <div class="col-md-4">
+        <div class="container2">
+              
+          <div class="card">
+            <div class="box">
+              <div class="content">
+                <h2>01</h2>
+                <h3>Schedule A Demo</h3>
+                <p>To reserve a schedule,<br>click here.</p>
+                <a data-popup-open="popupDemo">Schedule A Demo</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="container2">
+  
+          <div class="card">
+            <div class="box">
+              <div class="content">
+                <h2>02</h2>
+                <h3>Schedule An Online Meeting</h3>
+                <p>To book an online meeting,<br>click here.</p>
+                <a data-popup-open="popupMeeting">Schedule A Meeting</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="container2">
+          
+          <div class="card">
+            <div class="box">
+              <div class="content">
+                <h2>03</h2>
+                <h3>Be Our<br>Investor</h3>
+                <p>Want to be part of our list of partners? Click here.</p>
+                <a href="#" data-popup-open="popupBook">Register Now</a>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+    </div>
+  
+    
+          <div class="section-header" style="margin-top: 7%;">
+            <h2>For Other Concerns</h2>
+            </div>
+          
+  
+          <div class="row contact-info" style="margin-left: 1%;">
+  
+            <div class="col-md-4">
+              <div class="contact-address">
+                <i class="fa fa-map-marker" style="font-size:50px; color:#00558C; margin-left: 45%; margin-right: 45%; margin-bottom: 5%; text-align: center;"></i>
+                <h3 style="text-align: center;">Address</h3>
+                <address style="text-align: center;">Unit 305 & 306, Civic Prime Bldg. Centennial Lane St., Filinvest Corporate City, Brgy. Alabang, Muntinlupa City,</address>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="contact-phone">
+                <i class="fa fa-mobile-phone" style="font-size:60px; color:#00558C; margin-left: 45%; margin-right: 45%; margin-bottom: 5%; text-align: center;"></i>
+                <h3 style="text-align: center;">Phone Number</h3>
+                <p style="text-align: center;"><a href="+(02) 8645-9254">+(02) 8645-9254</a></p>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="contact-email">
+                <i class="fa fa-envelope" style="font-size:40px; color:#00558C; margin-left: 45%; margin-right: 45%; margin-bottom: 5%; text-align: center;"></i>
+                <h3 style="text-align: center;">Email</h3>
+                <p style="text-align: center;"><a href="mailto:business@seapps-inc.com">business@seapps-inc.com</a></p>
+              </div>
+            </div>
+  
+          </div>
+    
+    
+  
+  </div>
+</section>
+
+
+
+         
+<!--POPUP FOR REGISTRATION-->
+    
+
+<div class="popup" id="popupBook">
+  <div class="popup__inner">
+    <div class="popup__container">
+      
+      <div class="popup__content">
+        
+        <!-- your content -->
+        <div class="form">
+
+          <div class="popup__close popup-close" data-popup-close>
+            <div class="svg-icon">&#10006;</div>
+          </div>
+
+
+          <iframe src="https://app.simplymeet.me/technicalojt?view=compact" style="width:100%; height:650px;" frameborder="0" scrolling="yes"></iframe>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--POPUP FOR REGISTRATION--> 
+
+</main><!-- End #main -->
+
+
+
+
+<!--POPUP FOR DEMO-->
+    
+
+<div class="popup" id="popupDemo">
+  <div class="popup__inner">
+    <div class="popup__container">
+      
+      <div class="popup__content">
+        
+        <!-- your content -->
+        <div class="form">
+
+          <div class="popup__close popup-close" data-popup-close>
+            <div class="svg-icon">&#10006;</div>
+          </div>
+
+
+          <iframe src="https://app.simplymeet.me/seapps-inc/60min" style="width:100%; height:500px;" frameborder="0" scrolling="yes"></iframe>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--POPUP FOR DEMO-->  
+
+
+
+<!--POPUP FOR INVESTORS-->
+    
+
+<div class="popup" id="popupInvestors">
+  <div class="popup__inner">
+    <div class="popup__container">
+      
+      <div class="popup__content">
+        
+        <!-- your content -->
+        <div class="form">
+
+          <div class="popup__close popup-close" data-popup-close>
+            <div class="svg-icon">&#10006;</div>
+          </div>
+
+
+          <iframe src="https://app.simplymeet.me/seapps-inc/15min" style="width:100%; height:500px;" frameborder="0" scrolling="yes"></iframe>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--POPUP FOR INVESTORS-->  
+
+
+
+
+<!--POPUP FOR MEETING-->
+    
+
+<div class="popup" id="popupMeeting">
+<div class="popup__inner">
+  <div class="popup__container">
+    
+    <div class="popup__content">
+      
+      <!-- your content -->
+      <div class="form">
+
+        <div class="popup__close popup-close" data-popup-close>
+          <div class="svg-icon">&#10006;</div>
+        </div>
+
+
+        <iframe src="https://app.simplymeet.me/seapps-inc/60min" style="width:100%; height:500px;" frameborder="0" scrolling="yes"></iframe>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--POPUP FOR MEETING-->
+      
+
+<div class="popup" id="popupMeeting">
+  <div class="popup__inner">
+    <div class="popup__container">
+      
+      <div class="popup__content">
+        
+        <!-- your content -->
+        <div class="form">
+
+          <div class="popup__close popup-close" data-popup-close>
+            <div class="svg-icon">&#10006;</div>
+          </div>
+
+
+          <iframe src="https://app.simplymeet.me/seapps-inc/60min" style="width:100%; height:500px;" frameborder="0" scrolling="yes"></iframe>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--POPUP FOR MEETING-->  
+
+
+ </main>
+    
+ <!-- End Contact Section -->
+  
+ <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+ <!-- Vendor JS Files -->
+ <script src="assets/vendor/aos/aos.js"></script>
+ <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+ <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+ <script src="assets/vendor/php-email-form/validate.js"></script>
+
+ <!-- Template Main JS File -->
+ <script src="assets/js/contactus-js.js"></script>
+
 </body>
 
 </html>
